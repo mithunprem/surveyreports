@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import { Row, CardDeck } from 'reactstrap';
+import { Row } from 'reactstrap';
 import SurveyMetaData from '../PageComponents/SurveyMetaData';
+import { API_URL } from '../Constants';
 
 export default class Surveys extends Component {
 
@@ -26,7 +27,7 @@ export default class Surveys extends Component {
   }
 
   fetchSurveyResults() {
-    return fetch('https://px2yf2j445.execute-api.us-west-2.amazonaws.com/production/surveys')
+    return fetch(`${API_URL}/surveys`)
       .then(response => response.json())
       .catch(error => console.error('Error:', error));
   }
