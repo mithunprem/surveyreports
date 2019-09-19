@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 
-function Header () {
+const Header = ({ children }) => {
   return (
     <Fragment>
       <Navbar color="dark" dark expand="xs">
@@ -9,6 +9,7 @@ function Header () {
           <span>Survey Reports</span>
         </NavbarBrand>
       </Navbar>
+      { children }
     </Fragment>
   );
 }
