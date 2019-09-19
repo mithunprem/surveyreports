@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import SurveryMetaData from './PageComponents/SurveryMetaData';
+import { Row, CardDeck } from 'reactstrap';
+import SurveyMetaData from '../PageComponents/SurveyMetaData';
 
 export default class Surveys extends Component {
 
   state = {
     isSurveyResultsLoading: false,
-    surveyResults: {}
+    surveyResults: []
   };
 
   componentDidMount() {
@@ -31,6 +32,24 @@ export default class Surveys extends Component {
   }
 
   render() {
-    return null;
+    const { surveyResults } = this.state;
+    if (!surveyResults.length > 0) return null;
+
+    return (
+      <Fragment>
+      <Row>
+      {
+        surveyResults.map(( survey, index ) => {
+          return (
+            <SurveyMetaData
+              key={index}
+              survey={survey}
+            />
+          )
+        })
+      }
+      </Row>
+      </Fragment>
+    );
   }
 }
