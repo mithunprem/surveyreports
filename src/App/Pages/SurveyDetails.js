@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Button } from 'reactstrap';
+import { Row, Button, Spinner } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
 import ThemeDetails from '../PageComponents/ThemeDetails';
 import ProgressBar from '../PageComponents/ProgressBar';
@@ -22,7 +22,7 @@ class SurveyDetails extends Component {
       async () => {
         const surveyDetails = await this.fetchSurveyDetails();
         this.setState({
-          isSurveyResultsLoading: false,
+          isSurveyDetailsLoading: false,
           surveyDetails
         });
       }
@@ -74,9 +74,18 @@ class SurveyDetails extends Component {
   }
 
   render() {
-    const { surveyDetails } = this.state;
-    if (!surveyDetails) return null;
+    const { surveyDetails, isSurveyDetailsLoading } = this.state;
 
+    if (isSurveyDetailsLoading) {
+      return (
+        <div class="m-4">
+          Loading survey details..
+          <Spinner type="grow" color="dark" />
+        </div>
+      )
+    } else if (!surveyDetails) {
+      return null;
+    }
     const { name, themes } = surveyDetails;
 
     return (

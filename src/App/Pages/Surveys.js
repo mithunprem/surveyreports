@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'reactstrap';
+import { Row, Spinner } from 'reactstrap';
 import SurveyMetaData from '../PageComponents/SurveyMetaData';
 import { API_URL } from '../Constants';
 import '../App.css';
@@ -34,8 +34,18 @@ export default class Surveys extends Component {
   }
 
   render() {
-    const { surveyResults } = this.state;
-    if (!surveyResults.length > 0) return null;
+    const { surveyResults, isSurveyResultsLoading } = this.state;
+
+    if (isSurveyResultsLoading) {
+      return (
+        <div class="m-4">
+          Loading survey results..
+          <Spinner type="grow" color="dark" />
+        </div>
+      )
+    } else if (!surveyResults.length > 0) {
+      return null;
+    }
 
     return (
       <div className="mt-3 survey-results">
