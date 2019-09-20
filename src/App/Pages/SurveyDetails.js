@@ -16,8 +16,7 @@ class SurveyDetails extends Component {
         isSurveyDetailsLoading: true
       },
       async () => {
-        const { survey_result_detail: surveyDetails } = await this.fetchSurveyDetails();
-        console.error(surveyDetails);
+        const surveyDetails = await this.fetchSurveyDetails();
         this.setState({
           isSurveyResultsLoading: false,
           surveyDetails
@@ -26,11 +25,47 @@ class SurveyDetails extends Component {
     );
   }
 
+  static formatQuestionResponses(response) {
+    const { survey_result_detail: surveyDetails } = response;
+    let themeAverage = 0;
+    let questionAverageRating = 0;
+
+    surveyDetails.themes.forEach(theme => {
+      themeAverage = 0;
+      theme.questions.forEach(question => {
+        questionAverageRating =
+          this.calculateAverageRating(question.survey_responses);
+        question.averageRating = questionAverageRating;
+        themeAverage+= questionAverageRating;
+      })
+      theme.averageRating = themeAverage / theme.questions.length ;
+    });
+    return surveyDetails;
+  }
+
+  static calculateAverageRating(surveyResponses) {
+    let responseAggregate = 0;
+    let numberOfResponses = 0;
+
+    if (!surveyResponses || !surveyResponses.length > 0) {
+      return null;
+    }
+
+    surveyResponses.forEach(({ response_content: response }) => {
+      if (response && (response !== "" || response !== " ")) {
+        responseAggregate+= Number(response);
+        numberOfResponses++;
+      }
+    });
+
+    return responseAggregate / numberOfResponses;
+  }
+
   fetchSurveyDetails() {
     const url = this.props.location.state.url;
     return fetch(`${API_URL}${url}`)
       .then(response => response.json())
-      //.then(response => this.constructor.formatQuestionResponses(response))
+      .then(response => this.constructor.formatQuestionResponses(response))
       .catch(error => console.error('Error:', error));
   }
 
