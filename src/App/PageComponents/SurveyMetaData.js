@@ -30,12 +30,12 @@ class SurveyMetaData extends Component {
                 Participant Count : {participant_count}
               </CardText>
               <CardText>
-                Submitted Response count : {submitted_response_count}
+                Submitted Response Count : {submitted_response_count}
               </CardText>
               <CardText>
                 Response Rate : {(response_rate*100).toFixed(2)}%
               </CardText>
-              <Button onClick={this.openSurveyDetailsPage}>
+              <Button size="sm" onClick={this.openSurveyDetailsPage}>
                 View Survey Details
               </Button>
             </CardBody>

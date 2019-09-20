@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Row } from 'reactstrap';
 import SurveyMetaData from '../PageComponents/SurveyMetaData';
 import { API_URL } from '../Constants';
@@ -17,7 +17,8 @@ export default class Surveys extends Component {
         isSurveyResultsLoading: true
       },
       async () => {
-        const { survey_results: surveyResults } = await this.fetchSurveyResults();
+        const { survey_results: surveyResults }
+          = await this.fetchSurveyResults();
         this.setState({
           isSurveyResultsLoading: false,
           surveyResults
@@ -38,7 +39,6 @@ export default class Surveys extends Component {
 
     return (
       <div className="mt-3 survey-results">
-        <h4 className="mb-3">Survey Results</h4>
         <Row>
         {
           surveyResults.map(( survey, index ) => {
