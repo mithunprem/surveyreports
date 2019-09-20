@@ -2,3 +2,11 @@
   float: left;
   margin-left: 15px;
 }
+
+.survey-details .progress {
+  width: 300px;
+}
+
+.theme-details .card .card-body {
+  padding: 5px;
+}
