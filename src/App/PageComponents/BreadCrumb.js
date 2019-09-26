@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Breadcrumb as Crumb, BreadcrumbItem } from 'reactstrap';
 
 const Breadcrumb = ({ pageName }) => {
@@ -10,6 +11,10 @@ const Breadcrumb = ({ pageName }) => {
       </Crumb>
     </Fragment>
   );
+}
+
+Breadcrumb.propTypes = {
+  pageName: PropTypes.string
 }
 
 export default Breadcrumb;

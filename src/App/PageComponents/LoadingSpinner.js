@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Spinner } from 'reactstrap';
 
 const LoadingSpinner = ({ spinnerText }) => {
@@ -9,6 +10,10 @@ const LoadingSpinner = ({ spinnerText }) => {
       </div>
     </Fragment>
   );
+}
+
+LoadingSpinner.propTypes = {
+  spinnerText: PropTypes.string
 }
 
 export default LoadingSpinner;

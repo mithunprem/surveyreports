@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Breadcrumb from './BreadCrumb';
-import ProgressBar from './ProgressBar';
-import SurveyMetaDataPopOver from './SurveyMetaDataPopOver';
+import CardBorderColourLegendView from './CardBorderColourLegendView';
+import SurveyMetaData from './SurveyMetaData';
 import Themes from './Themes';
 import formatSurveyResponses from '../Utils/FormatSurveyResponses';
 
@@ -25,12 +25,12 @@ class SurveyDetails extends Component {
 
     return (
       <Fragment>
-        <Breadcrumb pageName={name} />
         <div className="survey-details">
+          <Breadcrumb pageName={name} />
           <h4 className="ml-4">{name}</h4>
-          <SurveyMetaDataPopOver data={surveyDetails} />
+          <SurveyMetaData data={surveyDetails} />
           <Themes themes={themes} />
-          <ProgressBar />
+          <CardBorderColourLegendView />
         </div>
       </Fragment>
     )

@@ -36,19 +36,16 @@ class SurveyDetailsWrapper extends Component {
   render() {
     const { surveyDetails, isSurveyDetailsLoading } = this.state;
 
-    if (!surveyDetails) {
-      if (isSurveyDetailsLoading) {
-        return <LoadingSpinner spinnerText='Loading survey details…' />;
-      }
-
-      return null;
+    if (!surveyDetails ) {
+      return isSurveyDetailsLoading ?
+        <LoadingSpinner spinnerText='Loading survey details…' /> : null;
     }
 
     return (
       <Fragment>
         <SurveyDetails surveyDetails={surveyDetails} />
       </Fragment>
-    )
+    );
   }
 }
 

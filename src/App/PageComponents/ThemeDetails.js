@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import {
   Col, Button, Card, Collapse,
   CardHeader, CardFooter, CardBody
@@ -9,6 +10,7 @@ export default class ThemeDetails extends Component {
 
   state = {
     showQuestions: false,
+    themeRating: 0,
     outlineColor: ""
   }
 
@@ -25,7 +27,7 @@ export default class ThemeDetails extends Component {
       outlineColor = "success";
     }
 
-    this.setState({ outlineColor });
+    this.setState({ themeRating, outlineColor });
   }
 
   toggleQuestionView = () => {
@@ -38,7 +40,7 @@ export default class ThemeDetails extends Component {
     const { theme } = this.props;
     if (!theme) return null;
 
-    const { showQuestions, outlineColor } = this.state;
+    const { showQuestions, themeRating, outlineColor } = this.state;
     const buttonText =
       showQuestions ? 'Hide responses' : 'View responses in detail';
 
@@ -48,20 +50,23 @@ export default class ThemeDetails extends Component {
           <Card body outline color={ outlineColor }>
             <CardHeader tag="h5">{theme.name}</CardHeader>
             <CardBody>
-              <Button
-                size="sm" color="link"
-                onClick={this.toggleQuestionView}
-                >{buttonText}</Button>
+              <Button size="sm" color="link" onClick={this.toggleQuestionView}>
+                {buttonText}
+              </Button>
               <Collapse isOpen={showQuestions}>
                 <QuestionsTable questions={theme.questions} />
               </Collapse>
             </CardBody>
             <CardFooter className="text-muted">
-              Average rating : {(theme.averageRating.toFixed(2))}
+              Average rating : {( themeRating )}
             </CardFooter>
           </Card>
         </Col>
       </Fragment>
     );
   }
+}
+
+ThemeDetails.propTypes = {
+  theme: PropTypes.object
 }

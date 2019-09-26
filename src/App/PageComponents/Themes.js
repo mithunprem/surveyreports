@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Row } from 'reactstrap';
 import ThemeDetails from './ThemeDetails';
 
@@ -16,6 +17,10 @@ const Themes = ({ themes }) => {
       </Row>
     </Fragment>
   );
+}
+
+Themes.propTypes = {
+  themes: PropTypes.array
 }
 
 export default Themes;

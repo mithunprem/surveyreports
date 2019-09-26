@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { Table } from 'reactstrap';
 
 const QuestionsTable = ({ questions }) => {
@@ -28,6 +29,10 @@ const QuestionsTable = ({ questions }) => {
       </Table>
     </Fragment>
   );
+}
+
+QuestionsTable.propTypes = {
+  questions: PropTypes.array
 }
 
 export default QuestionsTable;
