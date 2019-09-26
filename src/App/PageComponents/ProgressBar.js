@@ -8,13 +8,13 @@ const ProgressBar = () => {
         <span className="small" >Theme cards coloring legend :</span>
         <Progress multi>
           <Progress bar color="danger" value="33.3">
-            rating &lt; 3.5
+            Rating &lt; 3.5
           </Progress>
           <Progress bar color="warning" value="33.3">
-            3.5 &lt; rating &lt; 4
+            3.5 &lt; Rating &lt; 4
           </Progress>
           <Progress bar color="success" value="33.3">
-            rating &gt; 4
+            Rating &gt; 4
           </Progress>
         </Progress>
       </div>

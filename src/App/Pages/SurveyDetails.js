@@ -78,7 +78,7 @@ class SurveyDetails extends Component {
 
     if (isSurveyDetailsLoading) {
       return (
-        <div class="m-4">
+        <div className="m-4">
           Loading survey details..
           <Spinner type="grow" color="dark" />
         </div>
@@ -100,8 +100,8 @@ class SurveyDetails extends Component {
           <SurveyMetaDataPopOver
             target={"viewMetaDataButton"} data={surveyDetails}/>
           <hr />
-          <h6 className="ml-4"> Themes Focussed :</h6>
-          <Row className="theme-details ml-1 mb-4">
+          <h6 className="ml-4 mb-2"> Themes Focussed :</h6>
+          <Row className="theme-details ml-1 mb-3 mr-1">
             {
               themes.map((theme, index) => {
                 return <ThemeDetails key={index} theme={theme}/>

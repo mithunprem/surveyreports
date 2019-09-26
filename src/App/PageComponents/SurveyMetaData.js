@@ -22,7 +22,7 @@ class SurveyMetaData extends Component {
 
     return (
       <Fragment>
-        <Col xs={12} sm="auto" className="p-3">
+        <Col xs={8} sm="auto" className="p-0 m-3">
           <Card>
             <CardHeader tag="h5">{name}</CardHeader>
             <CardBody>

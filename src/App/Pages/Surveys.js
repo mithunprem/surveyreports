@@ -38,7 +38,7 @@ export default class Surveys extends Component {
 
     if (isSurveyResultsLoading) {
       return (
-        <div class="m-4">
+        <div className="m-4">
           Loading survey results..
           <Spinner type="grow" color="dark" />
         </div>
@@ -48,8 +48,7 @@ export default class Surveys extends Component {
     }
 
     return (
-      <div className="mt-3 survey-results">
-        <Row>
+      <Row className="mt-3 mb-3 survey-results">
         {
           surveyResults.map(( survey, index ) => {
             return (
@@ -60,8 +59,7 @@ export default class Surveys extends Component {
             )
           })
         }
-        </Row>
-      </div>
+      </Row>
     );
   }
 }

@@ -44,7 +44,7 @@ export default class ThemeDetails extends Component {
 
     return (
       <Fragment>
-        <Col xs={12} sm={5} className="m-2">
+        <Col xs={12} sm={12} md={6} xl={6} className="mb-4">
           <Card body outline color={ outlineColor }>
             <CardHeader tag="h5">{theme.name}</CardHeader>
             <CardBody>
