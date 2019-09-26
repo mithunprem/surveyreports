@@ -6,7 +6,7 @@ import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Header from './App/Header';
 import Surveys from './App/Pages/Surveys';
-import SurveyDetails from './App/Pages/SurveyDetails';
+import SurveyDetailsWrapper from './App/Pages/SurveyDetailsWrapper';
 import './index.css';
 
 const history = createBrowserHistory();
@@ -21,7 +21,7 @@ ReactDOM.render(
       />
       <Route
         path='/surveyDetails'
-        render={() => <Header><SurveyDetails /></Header>}
+        render={() => <Header><SurveyDetailsWrapper /></Header>}
       />
     </Switch>
   </Router>,
