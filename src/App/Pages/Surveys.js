@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Spinner } from 'reactstrap';
+import { Row } from 'reactstrap';
 import SurveyMetaData from '../PageComponents/SurveyMetaData';
+import LoadingSpinner from '../PageComponents/LoadingSpinner';
 import { API_URL } from '../Constants';
 import '../App.css';
 
@@ -36,14 +37,11 @@ export default class Surveys extends Component {
   render() {
     const { surveyResults, isSurveyResultsLoading } = this.state;
 
-    if (isSurveyResultsLoading) {
-      return (
-        <div className="m-4">
-          Loading survey results..
-          <Spinner type="grow" color="dark" />
-        </div>
-      )
-    } else if (!surveyResults.length > 0) {
+    if (!surveyResults.length > 0 ) {
+      if ( isSurveyResultsLoading ) {
+        return <LoadingSpinner spinnerText='Loading Survey Results' />;
+      }
+
       return null;
     }
 
