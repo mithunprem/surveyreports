@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Breadcrumb from './BreadCrumb';
-import CardBorderColourLegendView from './CardBorderColourLegendView';
+import ColourLegendView from './ColourLegendView';
 import SurveyMetaData from './SurveyMetaData';
 import Themes from './Themes';
 import formatSurveyResponses from '../Utils/FormatSurveyResponses';
@@ -30,7 +30,7 @@ class SurveyDetails extends Component {
           <h4 className="ml-4">{name}</h4>
           <SurveyMetaData data={surveyDetails} />
           <Themes themes={themes} />
-          <CardBorderColourLegendView />
+          <ColourLegendView />
         </div>
       </Fragment>
     )

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { Progress } from 'reactstrap';
 
-const CardBorderColourLegendView = () => {
+const ColourLegendView = () => {
   return (
     <Fragment>
-      <div className="ml-3 mb-4">
-        <span className="small" >Theme cards coloring legend :</span>
+      <div className="ml-3 mb-4 color-legend">
+        <span className="small" >Color legend :</span>
         <Progress multi>
           <Progress bar color="danger" value="33.3">
             Rating &lt; 3.5
@@ -22,4 +22,4 @@ const CardBorderColourLegendView = () => {
   )
 }
 
-export default CardBorderColourLegendView;
+export default ColourLegendView;
