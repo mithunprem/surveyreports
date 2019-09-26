@@ -5,6 +5,8 @@ import {
   CardHeader, CardFooter, CardBody
 } from 'reactstrap';
 import QuestionsTable from './QuestionsTable';
+import colourCodesForRating from '../Utils/ColourCodesForRating';
+
 
 export default class ThemeDetails extends Component {
 
@@ -17,15 +19,7 @@ export default class ThemeDetails extends Component {
   componentDidMount() {
     const { theme } = this.props;
     const themeRating = theme.averageRating.toFixed(2);
-    let outlineColor = "";
-
-    if (themeRating < 3.5) {
-      outlineColor = "danger";
-    } else if (3.5 < themeRating && themeRating < 4) {
-      outlineColor = "warning";
-    } else {
-      outlineColor = "success";
-    }
+    let outlineColor = colourCodesForRating(themeRating);
 
     this.setState({ themeRating, outlineColor });
   }
@@ -47,7 +41,7 @@ export default class ThemeDetails extends Component {
     return (
       <Fragment>
         <Col xs={12} sm={12} md={6} xl={6} className="mb-4">
-          <Card body outline color={ outlineColor }>
+          <Card body outline className={`theme-details margin-${outlineColor}`}>
             <CardHeader tag="h5">{theme.name}</CardHeader>
             <CardBody>
               <Button size="sm" color="link" onClick={this.toggleQuestionView}>
