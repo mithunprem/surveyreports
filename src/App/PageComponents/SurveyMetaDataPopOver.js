@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { UncontrolledPopover, PopoverBody } from 'reactstrap';
+import { Button, UncontrolledPopover, PopoverBody } from 'reactstrap';
 
-const SurveyMetaDataPopOver = ({ target, data }) => {
+const SurveyMetaDataPopOver = ({ data }) => {
 
   const {
     participant_count, submitted_response_count, response_rate
@@ -9,6 +9,9 @@ const SurveyMetaDataPopOver = ({ target, data }) => {
 
   return (
     <Fragment>
+      <Button className="ml-3" size="sm" color="link" id="viewMetaDataButton">
+        View Survey Metadata
+      </Button>
       <UncontrolledPopover placement="bottom" target="viewMetaDataButton">
         <PopoverBody>
           <p>

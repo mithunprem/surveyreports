@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { Breadcrumb as Crumb, BreadcrumbItem } from 'reactstrap';
 
-const Breadcrumb = ({ name }) => {
+const Breadcrumb = ({ pageName }) => {
   return (
     <Fragment>
       <Crumb tag="nav" listTag="div">
         <BreadcrumbItem tag="a" href="/">Home</BreadcrumbItem>
-        <BreadcrumbItem active tag="span">{name}</BreadcrumbItem>
+        <BreadcrumbItem active tag="span">{pageName}</BreadcrumbItem>
       </Crumb>
     </Fragment>
   );
