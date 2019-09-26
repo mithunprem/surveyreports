@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Progress } from 'reactstrap';
 
-const ProgressBar = () => {
+const CardBorderColourLegendView = () => {
   return (
     <Fragment>
       <div className="ml-3 mb-4">
@@ -22,4 +22,4 @@ const ProgressBar = () => {
   )
 }
 
-export default ProgressBar;
+export default CardBorderColourLegendView;

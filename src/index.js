@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Header from './App/Header';
-import Surveys from './App/Pages/Surveys';
+import SurveyList from './App/Pages/SurveyList';
 import SurveyDetailsWrapper from './App/Pages/SurveyDetailsWrapper';
 import './index.css';
 
@@ -17,7 +17,7 @@ ReactDOM.render(
       <Route
         path='/'
         exact
-        render={() => <Header><Surveys /></Header>}
+        render={() => <Header><SurveyList /></Header>}
       />
       <Route
         path='/surveyDetails'
