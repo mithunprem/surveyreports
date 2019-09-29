@@ -1,0 +1,17 @@
+.theme-details {
+  .card .card-body {
+    padding: 5px;
+  }
+
+  &.margin-green {
+    border-color: green;
+  }
+
+  &.margin-red {
+    border-color: red;
+  }
+
+  &.margin-yellow {
+    border-color: #f5b238d4;
+  }
+}

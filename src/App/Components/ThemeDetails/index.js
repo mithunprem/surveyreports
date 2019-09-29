@@ -4,8 +4,9 @@ import {
   Col, Button, Card, Collapse,
   CardHeader, CardFooter, CardBody
 } from 'reactstrap';
-import QuestionsTable from './QuestionsTable';
-import colourCodesForRating from '../Utils/ColourCodesForRating';
+import QuestionsTable from '../QuestionsTable';
+import colourCodesForRating from '../../Utils/ColourCodesForRating';
+import './themeDetails.scss';
 
 
 export default class ThemeDetails extends Component {
