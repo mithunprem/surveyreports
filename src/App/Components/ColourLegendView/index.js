@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Progress } from 'reactstrap';
+import './colorLegendView.scss';
 
 const ColourLegendView = () => {
   return (
