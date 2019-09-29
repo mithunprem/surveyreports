@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Col, Card, CardHeader, CardBody, CardText, Button } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
-import { SURVEY_DETAILS_URL } from '../Constants';
+import { SURVEY_DETAILS_URL } from '../../Constants';
 
 class Survey extends Component {
 
