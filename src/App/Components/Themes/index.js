@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Row } from 'reactstrap';
-import ThemeDetails from './ThemeDetails';
+import ThemeDetails from '../ThemeDetails';
 
 const Themes = ({ themes }) => {
   return (
