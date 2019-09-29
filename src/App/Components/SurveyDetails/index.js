@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Breadcrumb from './BreadCrumb';
-import ColourLegendView from './ColourLegendView';
-import SurveyMetaData from './SurveyMetaData';
-import Themes from './Themes';
-import formatSurveyResponses from '../Utils/FormatSurveyResponses';
+import Breadcrumb from '../BreadCrumb';
+import ColourLegendView from '../ColourLegendView';
+import SurveyMetaData from '../SurveyMetaData';
+import Themes from '../Themes';
+import formatSurveyResponses from '../../Utils/FormatSurveyResponses';
 
 class SurveyDetails extends Component {
 
