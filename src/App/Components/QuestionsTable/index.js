@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Table } from 'reactstrap';
-import colourCodesForRating from '../Utils/ColourCodesForRating';
+import colourCodesForRating from '../../Utils/ColourCodesForRating';
+import './questionsTable.scss';
 
 const QuestionsTable = ({ questions }) => {
   return (

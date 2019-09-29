@@ -1,0 +1,19 @@
+.questions-table {
+  .average-rating-header {
+    white-space: nowrap;
+  }
+
+  .average-rating-value {
+    text-align: center;
+
+    &.text-green{
+      color: green;
+    }
+    &.text-red{
+      color: red;
+    }
+    &.text-yellow{
+      color: #d89316;
+    }
+  }
+}
