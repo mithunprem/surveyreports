@@ -1,0 +1,49 @@
+.survey-list {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.survey-details {
+  .theme-details {
+    .card .card-body {
+      padding: 5px;
+    }
+
+    &.margin-green {
+      border-color: green;
+    }
+
+    &.margin-red {
+      border-color: red;
+    }
+
+    &.margin-yellow {
+      border-color: #f5b238d4;
+    }
+
+    .questions-table {
+      .average-rating-header {
+        white-space: nowrap;
+      }
+
+      .average-rating-value {
+        text-align: center;
+
+        &.text-green{
+          color: green;
+        }
+        &.text-red{
+          color: red;
+        }
+        &.text-yellow{
+          color: #d89316;
+        }
+      }
+    }
+  }
+
+  .color-legend {
+    width: 300px;
+  }
+}

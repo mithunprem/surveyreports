@@ -3,7 +3,7 @@ import { Row } from 'reactstrap';
 import LoadingSpinner from '../PageComponents/LoadingSpinner';
 import Survey from '../PageComponents/Survey';
 import { API_URL } from '../Constants';
-import '../App.css';
+import '../App.scss';
 
 export default class SurveyList extends Component {
 
