@@ -36,7 +36,8 @@ class Survey extends Component {
               <CardText>
                 Response Rate : {(response_rate*100).toFixed(2)}%
               </CardText>
-              <Button size="sm" onClick={this.openSurveyDetailsPage}>
+              <Button aria-label="View Survey Details Button" size="sm"
+                onClick={this.openSurveyDetailsPage}>
                 View Survey Details
               </Button>
             </CardBody>

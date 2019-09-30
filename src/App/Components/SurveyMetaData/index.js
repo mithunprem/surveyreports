@@ -10,7 +10,8 @@ const SurveyMetaData = ({ surveyMetaData }) => {
 
   return (
     <Fragment>
-      <Button className="ml-3" size="sm" color="link" id="viewMetaDataButton">
+      <Button className="ml-3" size="sm" color="link" 
+        id="viewMetaDataButton" aria-label="View Survey Metadata Button">
         View Survey Metadata
       </Button>
       <UncontrolledPopover placement="bottom" target="viewMetaDataButton">

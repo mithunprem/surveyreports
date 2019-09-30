@@ -43,7 +43,8 @@ export default class ThemeDetails extends Component {
           <Card body outline className={`theme-details margin-${outlineColor}`}>
             <CardHeader tag="h5">{theme.name}</CardHeader>
             <CardBody>
-              <Button size="sm" color="link" onClick={this.toggleQuestionView}>
+              <Button size="sm" color="link" onClick={this.toggleQuestionView}
+                aria-label="Toggle Question View Button" >
                 {buttonText}
               </Button>
               <Collapse isOpen={showQuestions}>
