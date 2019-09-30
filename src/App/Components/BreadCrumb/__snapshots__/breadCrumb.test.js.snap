@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadCrumb should render without throwing an error 1`] = `
+<nav
+  aria-label="breadcrumb"
+  className=""
+>
+  <div
+    className="breadcrumb"
+  >
+    <a
+      className="breadcrumb-item"
+      href="/"
+    >
+      Home
+    </a>
+    <span
+      aria-current="page"
+      className="active breadcrumb-item"
+    >
+      test
+    </span>
+  </div>
+</nav>
+`;

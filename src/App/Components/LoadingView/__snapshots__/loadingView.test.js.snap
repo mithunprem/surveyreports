@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingView should render a loading spinner without throwing an error 1`] = `
+<div
+  className="m-4"
+>
+  Loading test…
+   
+  <div
+    className="spinner-grow text-dark"
+    role="status"
+  >
+    <span
+      className="sr-only"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;
+
+exports[`LoadingView should render an alert view without throwing an error 1`] = `
+<div
+  className="alert alert-danger fade"
+  role="alert"
+>
+  Failed to load test. Please try again !.
+</div>
+`;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Survey should render without throwing an error 1`] = `
+<div
+  className="p-0 m-3 col-8 col-sm-auto"
+>
+  <div
+    className="card"
+  >
+    <h5
+      className="card-header"
+    >
+      Test survey
+    </h5>
+    <div
+      className="card-body"
+    >
+      <p
+        className="card-text"
+      >
+        Participant Count : 
+        6
+      </p>
+      <p
+        className="card-text"
+      >
+        Submitted Response Count : 
+        6
+      </p>
+      <p
+        className="card-text"
+      >
+        Response Rate : 
+        100.00
+        %
+      </p>
+      <button
+        aria-label="View Survey Details Button"
+        className="btn btn-secondary btn-sm"
+        onClick={[Function]}
+        type="button"
+      >
+        View Survey Details
+      </button>
+    </div>
+  </div>
+</div>
+`;

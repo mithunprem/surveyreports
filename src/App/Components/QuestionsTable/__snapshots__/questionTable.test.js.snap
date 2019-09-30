@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuestionsTable should render without throwing an error 1`] = `
+<table
+  className="questions-table table table-striped"
+>
+  <thead>
+    <tr>
+      <th>
+        Question
+      </th>
+      <th
+        className="average-rating-header"
+      >
+        Average Rating
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Test question 1
+      </td>
+      <td
+        className="average-rating-value text-yellow"
+      >
+        3.60
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Test question 2
+      </td>
+      <td
+        className="average-rating-value text-green"
+      >
+        4.60
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeDetails should render without throwing an error 1`] = `
+<div
+  className="mb-4 col-12 col-sm-12 col-md-6 col-xl-6"
+>
+  <div
+    className="theme-details margin-green card card-body"
+  >
+    <h5
+      className="card-header"
+    >
+      The Work
+    </h5>
+    <div
+      className="card-body"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-link btn-sm"
+        onClick={[Function]}
+        type="button"
+      >
+        View responses in detail
+      </button>
+      <div
+        className="collapse"
+        style={Object {}}
+      >
+        <table
+          className="questions-table table table-striped"
+        >
+          <thead>
+            <tr>
+              <th>
+                Question
+              </th>
+              <th
+                className="average-rating-header"
+              >
+                Average Rating
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Test question 1
+              </td>
+              <td
+                className="average-rating-value text-green"
+              >
+                5.00
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      className="text-muted card-footer"
+    >
+      Average rating : 
+      4.50
+    </div>
+  </div>
+</div>
+`;

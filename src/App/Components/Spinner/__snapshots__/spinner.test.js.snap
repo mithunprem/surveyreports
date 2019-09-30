@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render without throwing an error 1`] = `
+<div
+  className="m-4"
+>
+  Test
+   
+  <div
+    className="spinner-grow text-dark"
+    role="status"
+  >
+    <span
+      className="sr-only"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;

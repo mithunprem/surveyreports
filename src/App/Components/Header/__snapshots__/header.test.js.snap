@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render with a child component without throwing an error 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand navbar-dark bg-dark"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      <span>
+        Survey Reports
+      </span>
+    </a>
+  </nav>,
+  <div
+    className="m-4"
+  >
+    Loading survey results…
+     
+    <div
+      className="spinner-grow text-dark"
+      role="status"
+    >
+      <span
+        className="sr-only"
+      >
+        Loading...
+      </span>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Header should render without throwing an error 1`] = `
+<nav
+  className="navbar navbar-expand navbar-dark bg-dark"
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  >
+    <span>
+      Survey Reports
+    </span>
+  </a>
+</nav>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SurveyMetaData should render without throwing an error 1`] = `
+<button
+  aria-label={null}
+  className="ml-3 btn btn-link btn-sm"
+  id="viewMetaDataButton"
+  onClick={[Function]}
+>
+  View Survey Metadata
+</button>
+`;
