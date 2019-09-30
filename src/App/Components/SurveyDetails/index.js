@@ -5,7 +5,7 @@ import Breadcrumb from '../BreadCrumb';
 import ColourLegendView from '../ColourLegendView';
 import SurveyMetaData from '../SurveyMetaData';
 import Themes from '../Themes';
-import formatSurveyResponses from '../../Utils/FormatSurveyResponses';
+import formatSurveyResponses from '../../Utils/formatSurveyResponses';
 
 class SurveyDetails extends Component {
 
@@ -28,7 +28,7 @@ class SurveyDetails extends Component {
         <div className="survey-details">
           <Breadcrumb pageName={name} />
           <h4 className="ml-4">{name}</h4>
-          <SurveyMetaData data={surveyDetails} />
+          <SurveyMetaData surveyMetaData={surveyDetails} />
           <Themes themes={themes} />
           <ColourLegendView />
         </div>

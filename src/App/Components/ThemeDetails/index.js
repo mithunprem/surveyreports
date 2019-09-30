@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Col, Button, Card, Collapse,
-  CardHeader, CardFooter, CardBody
-} from 'reactstrap';
+  Col, Button, Card, Collapse, CardHeader, CardFooter, CardBody
+} from 'reactstrap' ;
 import QuestionsTable from '../QuestionsTable';
-import colourCodesForRating from '../../Utils/ColourCodesForRating';
+import colourCodesForRating from '../../Utils/colourCodesForRating';
 import './themeDetails.scss';
-
 
 export default class ThemeDetails extends Component {
 

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Table } from 'reactstrap';
-import colourCodesForRating from '../../Utils/ColourCodesForRating';
+import colourCodesForRating from '../../Utils/colourCodesForRating';
 import './questionsTable.scss';
 
 const QuestionsTable = ({ questions }) => {
@@ -22,7 +22,9 @@ const QuestionsTable = ({ questions }) => {
             return (
               <tr key={index}>
                 <td>{question.description}</td>
-                <td className={`average-rating-value text-${ratingColourCode}`}>{averageRating}</td>
+                <td className={`average-rating-value text-${ratingColourCode}`}>
+                  {averageRating}
+                </td>
               </tr>
             )
           })

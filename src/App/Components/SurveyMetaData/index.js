@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Button, UncontrolledPopover, PopoverBody } from 'reactstrap';
 
-const SurveyMetaData = ({ data }) => {
+const SurveyMetaData = ({ surveyMetaData }) => {
 
   const {
     participant_count, submitted_response_count, response_rate
-  } = data;
+  } = surveyMetaData;
 
   return (
     <Fragment>
@@ -27,7 +27,7 @@ const SurveyMetaData = ({ data }) => {
 }
 
 SurveyMetaData.propTypes = {
-  data: PropTypes.object
+  surveyMetaData: PropTypes.object
 }
 
 export default SurveyMetaData;
