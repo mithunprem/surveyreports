@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { Row } from 'reactstrap';
-import LoadingSpinner from '../PageComponents/LoadingSpinner';
-import Survey from '../PageComponents/Survey';
-import { API_URL } from '../Constants';
-import '../App.scss';
+import LoadingSpinner from '../../Components/LoadingSpinner';
+import Survey from '../../Components/Survey';
+import { API_URL } from '../../Constants';
+import './surveyList.scss';
 
 export default class SurveyList extends Component {
 
