@@ -2,7 +2,7 @@
 
 exports[`SurveyMetaData should render without throwing an error 1`] = `
 <button
-  aria-label={null}
+  aria-label="View Survey Metadata Button"
   className="ml-3 btn btn-link btn-sm"
   id="viewMetaDataButton"
   onClick={[Function]}
