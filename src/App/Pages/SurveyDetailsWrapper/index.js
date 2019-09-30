@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
+import { Alert } from 'reactstrap';
 import LoadingSpinner from '../../Components/LoadingSpinner';
 import SurveyDetails from '../../Components/SurveyDetails';
 import { API_URL } from '../../Constants';
@@ -37,8 +38,13 @@ class SurveyDetailsWrapper extends Component {
     const { surveyDetails, isSurveyDetailsLoading } = this.state;
 
     if (!surveyDetails ) {
-      return isSurveyDetailsLoading ?
-        <LoadingSpinner spinnerText='Loading survey details…' /> : null;
+      return (
+        isSurveyDetailsLoading ?
+          <LoadingSpinner spinnerText='Loading survey details…' /> :
+          <Alert color="danger">
+            Survey details failed to load. Please try again !.
+          </Alert>
+      )
     }
 
     return (
