@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Alert } from 'reactstrap';
-import LoadingSpinner from '../../Components/LoadingSpinner';
+import { Row } from 'reactstrap';
+import LoadingView from '../../Components/LoadingView';
 import Survey from '../../Components/Survey';
 import { API_URL } from '../../Constants';
 import './surveyList.scss';
@@ -39,12 +39,9 @@ export default class SurveyList extends Component {
 
     if (!surveyResults.length > 0 ) {
       return (
-        isSurveyResultsLoading ?
-          <LoadingSpinner spinnerText='Loading survey results…' /> :
-          <Alert color="danger">
-            Survey results failed to load. Please try again !.
-          </Alert>
-        )
+        <LoadingView
+          isLoading={isSurveyResultsLoading} text={'survey results'} />
+      )
     }
 
     return (
