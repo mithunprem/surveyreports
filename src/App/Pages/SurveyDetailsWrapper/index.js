@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
-import LoadingSpinner from '../PageComponents/LoadingSpinner';
-import SurveyDetails from '../PageComponents/SurveyDetails';
-import { API_URL } from '../Constants';
+import LoadingSpinner from '../../Components/LoadingSpinner';
+import SurveyDetails from '../../Components/SurveyDetails';
+import { API_URL } from '../../Constants';
 
 class SurveyDetailsWrapper extends Component {
 
